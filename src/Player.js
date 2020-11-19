@@ -649,7 +649,7 @@ class Player extends EventEmitter {
                 if (seekTime) {
                     queue.additionalStreamTime = seekTime
                 }
-                queue.voiceConnection.dispatcher.setVolumeLogarithmic(queue.calculatedVolume / 200)
+                queue.voiceConnection.dispatcher.setVolume(1)
                 // When the track starts
                 queue.voiceConnection.dispatcher.on('start', () => {
                     resolve()
